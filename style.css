@@ -66,10 +66,10 @@ button {
     color: #8FE3F9;
 }
 .download-btn:hover { 
-    background-color:#8FE3F9 ;
+    background-color:#71C0D4;
 }
 .download-btn:active {
-    background-color:#8FE3F9 ;
+    background-color:#71C0D4;
 }
 .info-btn {
     width: 139px;
@@ -77,10 +77,10 @@ button {
     background: #855FB1;
 }
 .info-btn:hover {
-    background-color:#D9B8FF;
+    background-color:#B18BDD;
 }
 .info-btn:active {
-    background-color:#D9B8FF;
+    background-color:#B18BDD;
 }
 .hero-right {
     margin-top: 55px;

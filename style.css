@@ -9,11 +9,8 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     line-height: 26px;
-    overflow: auto;
-    /* display: flex; */
-    /* position: relative; */
     max-width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 header .logo {
     display: flex;display: flex;
@@ -160,7 +157,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px; /* Adjust the padding as needed */ 
+    padding: 0 50px; 
 }
 .left-content  > h1{
     width: 350px;
@@ -209,13 +206,13 @@ button:hover {
 
 /* Tablet responsive */
 
-@media only screen and  (min-width: 768px)
+@media only screen and  (max-width: 768px)
 {
     header .logo {
-        padding: 40px; /* Reduced padding */
+        padding: 20px; /* Reduced padding */
     }
     .mid-section {
-        display: none; /* This will hide the mid section on tablet view */
+        display: none; 
     }
     .hero-right {
         margin-top: 0;
@@ -276,14 +273,14 @@ button:hover {
     }
     .hero-left, .hero-right {
         order: 1; /* Images first */
-        width: 50%; /* Images take half the width each */
+        width: 50%; 
     }
     .hero-left img, .hero-right img {
-        width: 100%; /* Images take full width of their parent */
+        width: 100%; 
     }
     .mid-section {
         order: 2; /* Mid section below images */
-        width: 100%; /* Mid section takes full width */
+        width: 100%; 
     }
     .container {
         width: 380px;

@@ -210,10 +210,10 @@ button > span {
     color: #D9B8FF;
 }
 button:active {
-    background: #D9B8FF; 
+    background: #B18BDD;; 
 }
 button:hover {
-    background: #D9B8FF; 
+    background: #B18BDD;; 
 }
 
 /* Tablet responsive */

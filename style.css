@@ -65,10 +65,22 @@ button {
 .download-btn > span {
     color: #8FE3F9;
 }
+.download-btn:hover { 
+    background-color:#8FE3F9 ;
+}
+.download-btn:active {
+    background-color:#8FE3F9 ;
+}
 .info-btn {
     width: 139px;
     height: 58px;
     background: #855FB1;
+}
+.info-btn:hover {
+    background-color:#D9B8FF;
+}
+.info-btn:active {
+    background-color:#D9B8FF;
 }
 .hero-right {
     margin-top: 55px;
@@ -198,10 +210,10 @@ button > span {
     color: #D9B8FF;
 }
 button:active {
-    background: #B18BDD; 
+    background: #D9B8FF; 
 }
 button:hover {
-    background: #B18BDD; 
+    background: #D9B8FF; 
 }
 
 /* Tablet responsive */

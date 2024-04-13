@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 26px;
+    overflow: auto;
+    /* display: flex; */
+    /* position: relative; */
+    max-width: 100%;
+    /* overflow-x: hidden; */
+}
+header .logo {
+    display: flex;display: flex;
+    justify-content: center;
+    padding: 80px;
+}
+.intro {
+    display: flex;
+    justify-content: space-around;
+}
+.hero-left {
+    margin-bottom: 150px;
+}
+.mid-section {
+    text-align: center;
+    padding: 0 0 48px 47px;
+
+}
+.mid-section h1 {
+    width: 445px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 64px;
+    color: #28283D;
+    padding: 15px 0 15px 15px;
+    
+}
+.mid-section p {
+    width: 540px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #87879D;
+    margin-top: 34px;
+}
+.buttons > .download-btn,
+.buttons > .info-btn {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 32px 10px 10px 10px;
+    border-radius: 29px;
+    border: none;   
+}
+.download-btn,
+button {
+    width: 193px;
+    height: 58px;
+    background: #4D96A9;     
+}
+.download-btn > span {
+    color: #8FE3F9;
+}
+.info-btn {
+    width: 139px;
+    height: 58px;
+    background: #855FB1;
+}
+.hero-right {
+    margin-top: 55px;
+}
+.vertical-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.line {
+    width: 1px;
+    height: 84px;
+    margin: 0 auto;
+    
+}
+.circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    background: #FAFAFA; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle p {
+    margin: 0;
+    color: #87879D;
+    font-size: 16px;
+    font-weight: 900;
+}
+.container {
+    width: 1014px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container  figure {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px; 
+    padding: 68px;
+    justify-content: center;
+}
+.container  figure > img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.container h4 {
+    color: #4D96A9;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.container h1 {
+    width: 445px;
+    color: #28283D;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px; /* 110% */
+    margin-top: 16px;
+    margin-bottom: 34px;
+}
+.container p {
+    width: 540px;
+    color: #87879D;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 64px;
+}
+footer {
+    height: 308px;
+    background: linear-gradient(rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url(assets/desktop/image-footer.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* Adjust the padding as needed */ 
+}
+.left-content  > h1{
+    width: 350px;
+    height: 88px;
+    color: #FAFAFA;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px; /* 110% */
+}
+.mid-content  > p{
+    width: 350px;
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px; /* 144.444% */
+    margin: auto;
+}
+.right-button {
+    text-align: right;
+    margin-bottom: 30px;
+
+}
+button {
+    color: #FFF;
+    width: 193px;
+    height: 58px;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 26px;
+    cursor: pointer;
+    margin: 32px 10px 10px 10px;
+    border-radius: 29px;
+    border: none;  
+    border-radius: 29px;
+    background-color: #855FB1;
+}
+button > span {
+    color: #D9B8FF;
+}
+button:active {
+    background: #B18BDD; 
+}
+button:hover {
+    background: #B18BDD; 
+}
+
+/* Tablet responsive */
+
+@media only screen and  (min-width: 768px)
+{
+    header .logo {
+        padding: 40px; /* Reduced padding */
+    }
+    .mid-section {
+        display: none; /* This will hide the mid section on tablet view */
+    }
+    .hero-right {
+        margin-top: 0;
+    }
+    .container {
+        font-family: "Red Hat Display";
+        width: 750px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    footer {
+        font-family: "Red Hat Display";
+        padding: 40px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .left-content > h1,
+    .mid-content > p,
+    .right-button {
+        width: 100%;
+        text-align: center;
+    }
+    .left-content {
+        padding: 20px 130px;
+    }
+    .mid-content {
+        padding: 0 50px;
+    }
+    .mid-content > p {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+    }
+    .right-button {
+        margin-top: 30px;
+    }
+
+    button {
+        width: 30%;
+        margin: 10px 0;
+    }
+}
+
+
+/*  Mobile screen */
+@media only screen and (max-width: 320px) {
+    header .logo {
+        padding: 20px; /* Reduced padding */
+    }
+    .intro {
+        display: flex;
+    }
+    .hero-left, .hero-right {
+        order: 1; /* Images first */
+        width: 50%; /* Images take half the width each */
+    }
+    .hero-left img, .hero-right img {
+        width: 100%; /* Images take full width of their parent */
+    }
+    .mid-section {
+        order: 2; /* Mid section below images */
+        width: 100%; /* Mid section takes full width */
+    }
+    .container {
+        width: 380px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .container  figure {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px; 
+        padding: 68px;
+        justify-content: center;
+    }
+    .container  figure > img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .container h4 h1 p {
+        width: 327px;
+    } 
+  
+  }
+  

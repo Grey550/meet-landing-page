@@ -6,28 +6,34 @@
 
 body{
     font-family: "Red Hat Display", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     line-height: 26px;
-    max-width: 100%;
     overflow-x: hidden;
 }
 header .logo {
-    display: flex;display: flex;
+    display: flex;
     justify-content: center;
     padding: 80px;
+}
+.mobile-hero{
+    display: none;
 }
 .intro {
     display: flex;
     justify-content: space-around;
+}
+.hero-container {
+    display: block;
 }
 .hero-left {
     margin-bottom: 150px;
 }
 .mid-section {
     text-align: center;
-    padding: 0 0 48px 47px;
-
+    padding: 0  0 48px 47px;
+}
+.hero-right {
+    margin-top: 55px;
 }
 .mid-section h1 {
     width: 445px;
@@ -82,10 +88,9 @@ button {
 .info-btn:active {
     background-color:#B18BDD;
 }
-.hero-right {
-    margin-top: 55px;
-}
+
 .vertical-line {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +102,8 @@ button {
     margin: 0 auto;
     
 }
-.circle {
+.circle,
+.circle-two {
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -107,7 +113,14 @@ button {
     justify-content: center;
     align-items: center;
 }
-.circle p {
+.circle-two {
+    position: absolute;
+    top: 50%; 
+    left: 46%; 
+    transform: translate(50%, 50%);
+}
+.circle p,
+.circle-two p {
     margin: 0;
     color: #87879D;
     font-size: 16px;
@@ -162,6 +175,7 @@ button {
     line-height: 26px; /* 144.444% */
     margin-bottom: 64px;
 }
+
 footer {
     height: 308px;
     background: linear-gradient(rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url(assets/desktop/image-footer.jpg);
@@ -216,22 +230,55 @@ button:hover {
     background: #B18BDD;; 
 }
 
-/* Tablet responsive */
-
+/* Tablet view */
 @media only screen and  (max-width: 768px)
 {
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .main {
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        height: 100vh; 
+    }
     header .logo {
-        padding: 20px; /* Reduced padding */
+        padding: 20px; 
     }
-    .mid-section {
-        display: none; 
+    .intro {
+        display: flex;
+        flex-direction: column;
     }
+    .hero-left,
     .hero-right {
-        margin-top: 0;
+        display: none;
+    }
+    .mobile-hero {
+        width: 100%;
+        order: 1;
+        display: flex;
+    }
+
+    .mid-section {
+        order: 2;
+        text-align: center;
+        margin: auto;
+        padding: 40px 0 0 0;
+    }
+
+    .mid-section h1 {
+        width: 445px;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 64px;
+        color: #28283D;
+        margin: auto;    
     }
     .container {
         font-family: "Red Hat Display";
-        width: 750px;
+        width: 100%;
+        max-width: 720px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -239,9 +286,20 @@ button:hover {
         justify-content: center;
         
     }
+    .vertical-line  > .line {
+        margin-top: 30px;
+
+    }
+    .circle-two {
+        position: absolute;
+        top: 60%;
+        left: 43%;
+        transform: translate(50%, 50%);
+    }
     footer {
+        background-image: linear-gradient(rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url(assets/tablet/image-footer.jpg);
         font-family: "Red Hat Display";
-        padding: 40px;
+        padding: 60px;
         height: auto;
         flex-direction: column;
         align-items: flex-start;
@@ -263,6 +321,7 @@ button:hover {
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
+        padding: 15px;
     }
     .right-button {
         margin-top: 30px;
@@ -278,24 +337,51 @@ button:hover {
 /*  Mobile screen */
 @media only screen and (max-width: 320px) {
     header .logo {
-        padding: 20px; /* Reduced padding */
+        padding: 20px; 
+    }
+    .main {
+        overflow-y: hidden;
     }
     .intro {
         display: flex;
     }
-    .hero-left, .hero-right {
-        order: 1; /* Images first */
-        width: 50%; 
+    .hero-left,
+    .hero-right {
+        display: none;
     }
-    .hero-left img, .hero-right img {
-        width: 100%; 
+    .mobile-hero > img {
+        display: flex;
+        width: 100%;
+        height: auto;
     }
     .mid-section {
-        order: 2; /* Mid section below images */
-        width: 100%; 
+        padding: 0;
+        margin: 0;
     }
+    .mid-section  > h1 {
+        width: 327px;
+        color: #28283D;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 44px;
+        padding: 30px 30px 0 30px;
+    }
+    .mid-section > p {
+        width: 327px;
+        color: #87879D;
+        /* text-align: center; */
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 26px;
+        padding: 0 40px 0 40px; 
+
+    } 
+    .buttons > .info-btn {
+        margin-top: 0;
+    }
+
     .container {
-        width: 380px;
+        max-width: 320px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -308,7 +394,7 @@ button:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 25px; 
-        padding: 68px;
+        padding: 20px;
         justify-content: center;
     }
     .container  figure > img {
@@ -316,9 +402,88 @@ button:hover {
         height: auto;
         border-radius: 10px;
     }
-    .container h4 h1 p {
-        width: 327px;
+    .container h4,
+    .container h1,
+    .container p {
+        width: 300px;
     } 
+    .container h4 {
+        color: #4D96A9;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 26px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 15px 12px 10px 12px;
+    }
+    .container h1 {
+        color: #28283D;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 36px; /* 112.5% */
+        padding: 0 2px 0 2px;
+    }
+    .container p {
+        color: #87879D;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px; /* 162.5% */
+        margin: 0;
+        padding: 0 11px 11px 11px;
+    }
+    .circle-two {
+        position: absolute;
+        top: 60%;
+        left: 33%;
+        transform: translate(50%, 40%);
+    }
+    footer {
+        background-image: linear-gradient(rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)) ,url(assets/mobile/image-footer.jpg);
+        font-family: "Red Hat Display";
+        padding: 20px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px 20px 20px;
+
+    }
+    .left-content > h1,
+    .mid-content > p,
+    .right-button {
+        max-width: 327px;
+        text-align: center;
+    }
+    .left-content > h1 {
+        color: #FAFAFA;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 36px;
+        padding: 20px 5px 5px 5px;
+    }
+    .left-content {
+        padding: 0;
+    }
+    .mid-content {
+        padding: 0;
+    }
+    .mid-content > p {
+        color: #FAFAFA;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-top: 25px;
+    }
+    .right-button {
+        margin-top: 10px;
+    }
+
+    .right-button > button {
+        width: 70%;
+        margin: 10px 0;
+    }
+
   
   }
   
